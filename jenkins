@@ -1,0 +1,21 @@
+node
+{
+    stage('scm') {
+         git 'https://github.com/wakaleo/game-of-life.git'
+
+    // some block
+}
+    
+   
+stage('mvn package') {
+sh 'mvn package'    // some block
+}
+stage('archiveArtifacts') {
+    // some block
+  archiveArtifacts 'gameoflife-web\\target\\*.war'
+
+}
+
+
+
+}
